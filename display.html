@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+  <header class="header-bar">
+    <div class="left-text">Paper</div>
+     <nav class="nav-tabs">
+      <a href="main.html">Formalities</a>
+      <a href="plp.html">Phi Lambda Phi</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="right-text">Rahsaan A. Simon</div>
+  </header>
+
+  <embed id = "paper"  width="800px" height="2100px" />
+
+  <script>
+  const type = localStorage.getItem("Type"); 
+  let paper = ""; 
+
+  if (type === 'SEHESE') {
+    paper = 'papers/poli/Democrats_see_no_evil_hear_no_evil.pdf';
+  } else if (type === 'DALTOB') {
+    // paper = 'papers/poli/On_Democrats_Leaving_Texas.pdf';
+    paper = ''
+  } else if (type === 'PLPCONST') {
+    paper = 'papers/plp/ΦΛΦ_Constitution.pdf'
+  } else if (type === 'EOH') {
+    paper = 'papers/philo/Essence_of_Humanity.pdf'
+  }
+
+  if (paper !== "") {
+    document.getElementById("paper").src = paper;
+  }
+
+  document.getElementById("paper").src = paper
+  </script>
+
+  
+  
+</body>
+</html>
