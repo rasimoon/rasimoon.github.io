@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+  <header class="header-bar">
+    <div class="left-text">Paper</div>
+     <nav class="nav-tabs">
+      <a href="index.html">Formalities</a>
+      <a href="plp.html">Phi Lambda Phi</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="right-text">Rahsaan A. Simon</div>
+  </header>
+
+<embed id="paper" />
+
+<script>
+  // get viewport size
+  function resizeEmbed() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const paperEmbed = document.getElementById("paper");
+    paperEmbed.width = width;
+    paperEmbed.height = height;
+  }
+
+  // set size on load
+  resizeEmbed();
+
+  // now handle paper loading
+  const type = localStorage.getItem("Type"); 
+  let paper = ""; 
+
+  if (type === 'SEHESE') {
+    paper = 'papers/poli/Democrats_see_no_evil_hear_no_evil.pdf';
+  } else if (type === 'DALTOB') {
+    paper = 'papers/poli/On_Democrats_Leaving_Texas.pdf'; 
+  } else if (type === 'PLPCONST') {
+    paper = 'papers/plp/ΦΛΦ_Constitution.pdf';
+  } else if (type === 'EOH') {
+    paper = 'papers/philo/Essence_of_Humanity.pdf';
+  } else if (type === 'PPM') {
+      paper = 'papers/philo/Philosophy_for_the_Practical_Man.pdf';
+  } else if (type === 'THEP') {
+      paper = 'papers/plp/The_Philosophy.pdf';
+  } else if (type === 'ONEPIS') {
+      paper = 'papers/plp/On_Epistemology.pdf';
+  } else if (type === 'ONETHIS') {
+      paper = 'papers/plp/On_Ethics.pdf';
+  } //
+
+  if (paper !== "") {
+    document.getElementById("paper").src = paper;
+  }
+</script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
