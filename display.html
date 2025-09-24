@@ -10,12 +10,12 @@
      <nav class="nav-tabs">
       <a href="index.html">Formalities</a>
       <a href="plp.html">Phi Lambda Phi</a>
-      <a href="#">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="right-text">Rahsaan A. Simon</div>
   </header>
 
-<embed id="paper" />
+<embed id="paper" type="application/pdf" src="" width="100%" height="100%" />
 
 <script>
   // get viewport size
@@ -27,6 +27,8 @@
     paperEmbed.width = width;
     paperEmbed.height = height;
   }
+  
+  const paperEmbed = document.getElementById("paper");
 
   // set size on load
   resizeEmbed();
@@ -54,7 +56,7 @@
   } //
 
   if (paper !== "") {
-    document.getElementById("paper").src = paper;
+    paperEmbed.src = paper;
   }
 </script>
   
