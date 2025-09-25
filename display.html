@@ -53,7 +53,11 @@
       paper = 'papers/plp/On_Epistemology.pdf';
   } else if (type === 'ONETHIS') {
       paper = 'papers/plp/On_Ethics.pdf';
-  } //
+  } else if (type === 'DIA') {
+      paper = 'papers/poli/Democracy_In_America.pdf';
+  } else if (type === 'MIM') {
+      paper = 'papers/poli/MIM.pdf';
+  }
 
   if (paper !== "") {
     paperEmbed.src = paper;
