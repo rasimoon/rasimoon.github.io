@@ -8,9 +8,7 @@
   <header class="header-bar">
     <div class="left-text">Paper</div>
      <nav class="nav-tabs">
-      <a href="index.html">Formalities</a>
-      <a href="plp.html">Phi Lambda Phi</a>
-      <a href="contact.html">Contact</a>
+      <a href="main.html">Back</a>
     </nav>
     <div class="right-text">Rahsaan A. Simon</div>
   </header>
@@ -27,8 +25,6 @@
     paperEmbed.width = width;
     paperEmbed.height = height;
   }
-  
-  const paperEmbed = document.getElementById("paper");
 
   // set size on load
   resizeEmbed();
@@ -40,36 +36,29 @@
   if (type === 'SEHESE') {
     paper = 'papers/poli/Democrats_see_no_evil_hear_no_evil.pdf';
   } else if (type === 'DALTOB') {
-    paper = 'papers/poli/On_Democrats_Leaving_Texas.pdf'; 
+    paper = ''; // placeholder
   } else if (type === 'PLPCONST') {
     paper = 'papers/plp/ΦΛΦ_Constitution.pdf';
   } else if (type === 'EOH') {
     paper = 'papers/philo/Essence_of_Humanity.pdf';
-  } else if (type === 'PPM') {
-      paper = 'papers/philo/Philosophy_for_the_Practical_Man.pdf';
-  } else if (type === 'THEP') {
-      paper = 'papers/plp/The_Philosophy.pdf';
-  } else if (type === 'ONEPIS') {
-      paper = 'papers/plp/On_Epistemology.pdf';
-  } else if (type === 'ONETHIS') {
-      paper = 'papers/plp/On_Ethics.pdf';
-  } else if (type === 'DIA') {
-      paper = 'papers/poli/Democracy_In_America.pdf';
+  } else if (type === 'gen') {
+    paper = 'papers/sci/Generalizing_Lexicons.pdf';
+  } else if (type === 'fair') {
+    paper = 'papers/sci/SY2026.pdf';
+  } else if (type === 'PFE') {
+    paper = 'papers/philo/PFE.pdf';
   } else if (type === 'MIM') {
-      paper = 'papers/poli/MIM.pdf';
+    paper = 'papers/poli/MIM.pdf';
   }
 
+  console.log(type);
+  console.log("rabbit");
   if (paper !== "") {
-    paperEmbed.src = paper;
+    document.getElementById("paper").src = paper;
   }
 </script>
+
+  
   
 </body>
 </html>
-
-
-
-
-
-
-
